@@ -35,7 +35,7 @@ def perform_actions():
     sp = spotipy.Spotify(auth=access_token)
 
     # URL for the Random Quote API
-    quote_api_url = 'https://api.quotable.io/quotes/random?tags=love'
+    quote_api_url = 'https://api.quotable.io/quotes/random' # For documentations, visit https://github.com/lukePeavey/quotable
 
     # Fetch a random quote
     response = requests.get(quote_api_url)
