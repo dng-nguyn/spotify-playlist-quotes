@@ -71,8 +71,8 @@ def is_token_expired():
         return expires_at - now < 60  # Check if it expires in less than 60 seconds
     return True
 
-# Schedule the script to run every 30 minutes
-schedule.every(1).minutes.do(perform_actions)
+# Schedule the script to run every 1 minute
+schedule.every(1).minutes.do(perform_actions) # Modify 1 to update in minutes
 
 # Run the script indefinitely
 while True:
