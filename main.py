@@ -68,7 +68,7 @@ def is_token_expired():
     if token_info:
         expires_at = token_info.get("expires_at")
         now = int(time.mktime(datetime.now().timetuple()))
-        return expires_at - now < 60  # Check if it expires in less than 60 seconds
+        return expires_at - now < 120  # Check if it expires in less than 120 seconds. I think you need to modify this to be always higer than the schedule value? idk i don't do code
     return True
 
 # Schedule the script to run every 1 minute
